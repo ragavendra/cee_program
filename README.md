@@ -4,10 +4,10 @@ is Set of C programs
 
 ### Usage
 
-To install (or update to the latest version) using the bundler gem. Add this line to your application's Gemfile:
+Compile and create binary with debug info
 
 ```
-gcc -Wall factorial.c -o factorial
+gcc -Wall -g factorial.c -o factorial
 ```
 
 then run
@@ -16,4 +16,14 @@ then run
 ./factorial
 ```
 
+debug
+
+```
+gdb factorial
+```
+
+in VIM using conquegdb
+```
+:ConqueGdb factorial
+```
 
