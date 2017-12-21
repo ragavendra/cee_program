@@ -43,17 +43,19 @@ void reverse (node_t **head) {
 	
 	while (current != NULL) {
 
+		//copy pointer next to a new node
+		//before overwriting it
 		next = current->next;
+
+		//reverse the next pointer
 		current->next = previous;
 
+		//step forward
 		previous = current;
 		current = next;
 	}
 
-	//new_list->next = NULL;
-
 	*head = previous;
-
 }
 
 //display list
@@ -63,7 +65,7 @@ void display_list (node_t *head) {
 
 	//prints the linked list
 	while (head != NULL) {
-		printf("%d\n", head->value);
+		printf("%d ", head->value);
 		head = head->next;
 		//printf("Hello");
 		index++;
