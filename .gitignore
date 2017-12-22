@@ -3,6 +3,9 @@
 !/**/
 !*.*
 
+#include make file w/o ext
+!makefile
+
 *.sw*
 
 # Prerequisites
