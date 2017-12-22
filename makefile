@@ -1,9 +1,13 @@
-IDIR = ../include
+# header .h files goes here
+IDIR = include
 CC = gcc
 CFLAGS = -I$(IDIR)
 
+# .o files created goes here
 ODIR = obj
-LDIR = ../lib
+
+# library files can go here
+LDIR = lib
 
 #incl macro libs mathlib
 LIBS = -lm
@@ -16,7 +20,7 @@ _OBJ = hellomake.o hellofunc.o
 OBJ = $(patsubst %, $(ODIR)/%, $(_OBJ))
 
 # make obj files, $@ means before : and $< means first item after :
-%(ODIR)/%.o: %.c $(DEPS)
+$(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 # $^ means all files after :
